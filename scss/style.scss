@@ -19,7 +19,7 @@ $primary-dark: #061e37;
 
 /* ---Sets--- */
 %secondary-buttons a {
-    color: black;
+    color: red;
     text-decoration: none;
     font-size: 17px;
     background-color: white;
@@ -60,7 +60,7 @@ h2 {
 
 /* ---Header--- */
 .section-header {
-    height: 750px;
+    min-height: 750px;
     margin: 0 auto;
     background-image: url("../img/header-bg.gif");
     background-size: cover;
