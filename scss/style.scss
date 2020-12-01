@@ -1,0 +1,373 @@
+@import "./scss/normalize.scss";
+@import "./accordin.scss";
+@import "./revievs-slider.scss";
+@import "./team-carousel.scss";
+
+/* ---Variables--- */
+$primary-dark: #061e37;
+
+@screen-phone: 576px;
+@screen-tablets: 768px;
+@screen-desktops: 992px;
+@screen-big-desktops: 1200px;
+
+@screen-phone-max: 767px;
+@screen-tablets-max: 991px;
+@screen-desktops-max: 1199px;
+
+/* ---/Variables--- */
+
+/* ---Sets--- */
+%secondary-buttons a {
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 2px 3px 4px -3px rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    font-weight: 700;
+    &:hover {
+        color: white;
+        font-weight: 700;
+        background-color: $primary-dark;
+    }
+}
+/* ---/Sets--- */
+
+body {
+    font-family: "Raleway";
+}
+
+h1 {
+    font-size: 55px;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+}
+h2 {
+    font-size: 18px;
+    font-weight: normal;
+    color: white;
+}
+
+.section-inner {
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+    max-width: 1300px;
+}
+
+/* ---Header--- */
+.section-header {
+    height: 750px;
+    margin: 0 auto;
+    background-image: url("../img/header-bg.gif");
+    background-size: cover;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        z-index: 5;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, rgba(51, 255, 204, 0.7), rgba(0, 153, 204, 0.8));
+    }
+    &-top {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 50px;
+        &-logo {
+            display: flex;
+            align-items: center;
+            img {
+                padding-right: 10px;
+            }
+            &-dart {
+                font-size: 15px;
+            }
+            &-service_manager {
+                font-size: 15px;
+                font-weight: 700;
+            }
+        }
+        &-navigation {
+            font-size: 15px;
+            font-weight: 600;
+        }
+        &-navigation a {
+            color: white;
+            text-align: center;
+            padding-right: 30px;
+            text-decoration: none;
+            font-size: 15px;
+        }
+        &-navigation a:hover {
+            color: black;
+            font-weight: 700;
+        }
+        &-navigation a.active {
+            color: black;
+        }
+
+        &-signup a {
+            color: white;
+            border: 1px solid white;
+            padding: 5px 15px 5px 15px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 12px;
+            border-radius: 2px;
+        }
+        &-signup a:hover {
+            color: white;
+            background-color: $primary-dark;
+            border: 1px solid $primary-dark;
+        }
+    }
+    &-wrapper {
+        padding-top: 160px;
+        display: flex;
+        justify-content: center;
+        &-discription {
+            max-width: 50%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            &-buttons {
+                display: flex;
+                padding-top: 28px;
+                justify-content: space-evenly;
+                padding-right: 10px;
+                padding-left: 10px;
+                @extend %secondary-buttons;
+            }
+        }
+    }
+}
+/* ---/Header--- */
+
+/* ---Discription--- */
+.section-discription {
+    &-introduction {
+        max-width: 100%;
+        text-align: center;
+        padding-top: 100px;
+        &-top {
+            font-size: 45px;
+            font-weight: 600;
+            color: black;
+        }
+        &-midle {
+            font-size: 25px;
+            font-weight: 600;
+            color: #b0bec5;
+            padding-top: 24px;
+        }
+        &-bottom {
+            font-size: 15px;
+            font-weight: normal;
+            color: #b0bec5;
+            max-width: 40%;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+    }
+    &-options {
+        display: flex;
+        padding-top: 100px;
+        text-align: center;
+        justify-content: space-around;
+        .option {
+            &-title {
+                font-size: 20px;
+                font-weight: 600;
+                color: black;
+                padding-top: 30px;
+            }
+            &-discription {
+                font-size: 15px;
+                font-weight: normal;
+                color: #78909c;
+                padding-top: 18px;
+                max-width: 365px;
+            }
+        }
+    }
+    &-get-started {
+        display: flex;
+        padding-top: 90px;
+        justify-content: center;
+        @extend %secondary-buttons;
+        & a {
+            background-color: #1de9b6;
+            &:hover {
+                background-color: $primary-dark;
+                color: white;
+            }
+        }
+    }
+    &-statistics-line {
+        padding-top: 100px;
+        display: flex;
+        justify-content: space-around;
+        .block-one,
+        .block-two,
+        .block-three,
+        .block-four {
+            height: 150px;
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .block-one {
+            background-color: #80d8ff;
+        }
+        .block-two {
+            background-color: #82b1ff;
+        }
+        .block-three {
+            background-color: #b388ff;
+        }
+        .block-four {
+            background-color: #ea80fc;
+        }
+        .block-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: white;
+            padding-left: 25px;
+        }
+    }
+}
+/* ---/Discription--- */
+
+/* ---Services--- */
+.section-services-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-title {
+        color: $primary-dark;
+        font-size: 45px;
+        font-weight: 600;
+        padding-top: 90px;
+    }
+    &-introduction {
+        color: #b0bec5;
+        font-size: 15px;
+        font-weight: normal;
+        padding-top: 25px;
+        padding-bottom: 50px;
+        max-width: 34%;
+        text-align: center;
+    }
+}
+
+/* ---/Services--- */
+
+/* ---Revievs--- */
+.section-revievs {
+    background-image: url(../img/section-revievs-bg.gif);
+    background-size: cover;
+    position: relative;
+}
+.section-revievs::before {
+    content: "";
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(51, 255, 204, 0.9), rgba(0, 153, 204, 1));
+}
+.section-revievs-wrapper {
+    display: flex;
+    min-height: 550px;
+    justify-content: space-between;
+}
+.revievs-title {
+    font-size: 45px;
+    font-weight: 600;
+    color: white;
+}
+.revievs-discription {
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+}
+.revievs-left-section {
+    display: flex;
+    max-width: 34%;
+    flex-direction: column;
+    justify-content: center;
+}
+.revievs-title {
+    font-weight: 600;
+    font-size: 45px;
+    color: white;
+}
+.revievs-discription {
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+    padding-top: 2rem;
+    padding-bottom: 6rem;
+}
+.revievs-get-started-btn {
+    @extend %secondary-buttons;
+    & a {
+        color: white;
+        background-color: $primary-dark;
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+}
+/* ---/Revievs--- */
+
+/* ---Team--- */
+.section-team {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+.team-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-title {
+        color: $primary-dark;
+        font-size: 45px;
+        font-weight: 600;
+    }
+    &-discription {
+        color: #b0bec5;
+        font-size: 15px;
+        font-weight: normal;
+        padding-top: 25px;
+        padding-bottom: 85px;
+        max-width: 34%;
+        text-align: center;
+    }
+}
+/* ---/Team--- */
+
+/* ---Fotter--- */
+.section-footer-wrapper {
+    height: 150px;
+    background-color: #1d3c5d;
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+/* ---/Footer--- */
