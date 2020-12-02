@@ -1,3 +1,5 @@
+$screen-phone-max: 767px;
+
 .accordion {
   background-color: white;
   color: #444;
@@ -20,6 +22,7 @@
   transition: max-height 0.1s ease-out;
   overflow: hidden;
   height: 170px;
+
   & img {
     margin-right: 15px;
     float: left;

@@ -1,3 +1,5 @@
+$screen-phone-max: 767px;
+
 .revisevs-slider-section {
     width: 50%;
     display: flex;
@@ -9,6 +11,10 @@
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    @media (max-width: $screen-phone-max) {
+        width: 100%;
+        padding-bottom: 43px
+    }
     .material-icons {
         font-family: "Material Icons";
         font-weight: normal;
@@ -59,7 +65,7 @@
 }
 @keyframes fade {
     0% {
-        opacity: .7;
+        opacity: 0.7;
     }
     100% {
         opacity: 1;
@@ -69,12 +75,18 @@
 .revievs-next-btn {
     display: flex;
     justify-content: center;
-    margin-left: 125px;
+    margin-left: 109px;
     cursor: pointer;
+    @media (max-width: $screen-phone-max) {
+        margin-left: 0px;
+    }
 }
 .material-icons:hover {
     color: white;
 }
 .reviever-photo {
     margin-right: 50px;
+    @media (max-width: $screen-phone-max) {
+        display: none;
+    }
 }

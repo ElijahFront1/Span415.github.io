@@ -6,20 +6,20 @@
 /* ---Variables--- */
 $primary-dark: #061e37;
 
-@screen-phone: 576px;
-@screen-tablets: 768px;
-@screen-desktops: 992px;
-@screen-big-desktops: 1200px;
+$screen-phone: 576px;
+$screen-tablets: 768px;
+$screen-desktops: 992px;
+$screen-big-desktops: 1200px;
 
-@screen-phone-max: 767px;
-@screen-tablets-max: 991px;
-@screen-desktops-max: 1199px;
+$screen-phone-max: 767px;
+$screen-tablets-max: 991px;
+$screen-desktops-max: 1199px;
 
 /* ---/Variables--- */
 
 /* ---Sets--- */
 %secondary-buttons a {
-    color: red;
+    color: black;
     text-decoration: none;
     font-size: 17px;
     background-color: white;
@@ -56,6 +56,8 @@ h2 {
     position: relative;
     z-index: 10;
     max-width: 1300px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 /* ---Header--- */
@@ -84,6 +86,10 @@ h2 {
         &-logo {
             display: flex;
             align-items: center;
+            padding-left: 15px;
+            @media (max-width: $screen-phone-max) {
+                display: none;
+            }
             img {
                 padding-right: 10px;
             }
@@ -98,6 +104,11 @@ h2 {
         &-navigation {
             font-size: 15px;
             font-weight: 600;
+            @media (max-width: $screen-phone-max) {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
         }
         &-navigation a {
             color: white;
@@ -105,6 +116,9 @@ h2 {
             padding-right: 30px;
             text-decoration: none;
             font-size: 15px;
+            @media (max-width: $screen-phone-max) {
+                padding-right: 0px;
+            }
         }
         &-navigation a:hover {
             color: black;
@@ -139,12 +153,16 @@ h2 {
             flex-direction: column;
             text-align: center;
             align-items: center;
+            @media (max-width: $screen-phone-max) {
+                max-width: 100%;
+            }
             &-buttons {
                 display: flex;
                 padding-top: 28px;
                 justify-content: space-evenly;
                 padding-right: 10px;
                 padding-left: 10px;
+                padding-bottom: 13px;
                 @extend %secondary-buttons;
             }
         }
@@ -176,6 +194,9 @@ h2 {
             max-width: 40%;
             margin: 0 auto;
             padding-top: 20px;
+            @media (max-width: $screen-phone-max) {
+                max-width: 100%;
+            }
         }
     }
     &-options {
@@ -183,6 +204,9 @@ h2 {
         padding-top: 100px;
         text-align: center;
         justify-content: space-around;
+        @media (max-width: $screen-phone-max) {
+            flex-direction: column;
+        }
         .option {
             &-title {
                 font-size: 20px;
@@ -196,6 +220,7 @@ h2 {
                 color: #78909c;
                 padding-top: 18px;
                 max-width: 365px;
+                margin: 0 auto;
             }
         }
     }
@@ -216,6 +241,9 @@ h2 {
         padding-top: 100px;
         display: flex;
         justify-content: space-around;
+        @media (max-width: $screen-phone-max) {
+            flex-direction: column;
+        }
         .block-one,
         .block-two,
         .block-three,
@@ -267,6 +295,9 @@ h2 {
         padding-bottom: 50px;
         max-width: 34%;
         text-align: center;
+        @media (max-width: $screen-phone-max) {
+            max-width: 100%;
+        }
     }
 }
 
@@ -292,6 +323,9 @@ h2 {
     display: flex;
     min-height: 550px;
     justify-content: space-between;
+    @media (max-width: $screen-phone-max) {
+        flex-direction: column;
+    }
 }
 .revievs-title {
     font-size: 45px;
@@ -308,6 +342,12 @@ h2 {
     max-width: 34%;
     flex-direction: column;
     justify-content: center;
+    @media (max-width: $screen-phone-max) {
+        max-width: 100%;
+        align-items: center;
+        padding-bottom: 60px;
+        padding-top: 60px;
+    }
 }
 .revievs-title {
     font-weight: 600;
@@ -356,18 +396,29 @@ h2 {
         padding-bottom: 85px;
         max-width: 34%;
         text-align: center;
+        
+    @media (max-width: $screen-phone-max) {
+        max-width: 100%;
+    }
     }
 }
 /* ---/Team--- */
 
 /* ---Fotter--- */
+.section-footer {
+    background-color: #1d3c5d;
+}
 .section-footer-wrapper {
     height: 150px;
-    background-color: #1d3c5d;
     display: flex;
     padding-left: 15px;
     padding-right: 15px;
     justify-content: space-between;
     align-items: center;
+
+    @media (max-width: $screen-phone-max) {
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
 }
 /* ---/Footer--- */
