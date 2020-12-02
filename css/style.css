@@ -556,7 +556,8 @@ template {
 
 /* ---/Sets--- */
 body {
-  font-family: "Raleway"; }
+  font-family: "Raleway";
+  -webkit-tap-highlight-color: transparent; }
 
 h1 {
   font-size: 55px;
