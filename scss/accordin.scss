@@ -1,3 +1,4 @@
+$screen-phone: 540px;
 $screen-phone-max: 767px;
 
 .accordion {
@@ -21,14 +22,25 @@ $screen-phone-max: 767px;
   max-height: 0;
   transition: max-height 0.1s ease-out;
   overflow: hidden;
-  height: 170px;
-
+  @media (max-width: $screen-phone) {
+    display: flex;
+    flex-direction: column;
+  }
   & img {
     margin-right: 15px;
     float: left;
+    padding-bottom: 10px;
+    @media (max-width: $screen-phone) {
+      max-width: 100%;
+      height: auto;
+      margin: auto;
+    }
   }
   & p {
     margin-top: 8px;
+    @media (max-width: $screen-phone) {
+      text-align: center;
+    }
   }
 }
 .accordion-elements {

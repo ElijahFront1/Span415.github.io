@@ -337,13 +337,25 @@ template {
   background-color: white;
   max-height: 0;
   transition: max-height 0.1s ease-out;
-  overflow: hidden;
-  height: 170px; }
+  overflow: hidden; }
+  @media (max-width: 540px) {
+    .panel {
+      display: flex;
+      flex-direction: column; } }
   .panel img {
     margin-right: 15px;
-    float: left; }
+    float: left;
+    padding-bottom: 10px; }
+    @media (max-width: 540px) {
+      .panel img {
+        max-width: 100%;
+        height: auto;
+        margin: auto; } }
   .panel p {
     margin-top: 8px; }
+    @media (max-width: 540px) {
+      .panel p {
+        text-align: center; } }
 
 .accordion-elements {
   padding-bottom: 90px; }
@@ -459,6 +471,9 @@ template {
   .team-carousel-images {
     display: flex;
     flex-direction: row; }
+    @media (max-width: 321px) {
+      .team-carousel-images {
+        flex-direction: column; } }
     .team-carousel-images img {
       transition: transform 0.3s;
       margin: 0 auto; }
@@ -467,7 +482,7 @@ template {
   display: block;
   cursor: pointer;
   opacity: 0.3;
-  transition: .3s ease;
+  transition: 0.3s ease;
   backface-visibility: hidden; }
 
 .carouselitem {
@@ -504,7 +519,8 @@ template {
   @media (max-width: 767px) {
     .team-carousel-images-box {
       width: 120px;
-      height: 110px; } }
+      height: 110px;
+      padding-bottom: 15px; } }
 
 .social-networks a {
   padding-top: 5px;
@@ -685,6 +701,9 @@ h2 {
   @media (max-width: 767px) {
     .section-discription-options {
       flex-direction: column; } }
+  @media (max-width: 767px) {
+    .section-discription-options .option {
+      padding-top: 40px; } }
   .section-discription-options .option-title {
     font-size: 20px;
     font-weight: 600;
@@ -806,7 +825,8 @@ h2 {
       max-width: 100%;
       align-items: center;
       padding-bottom: 60px;
-      padding-top: 60px; } }
+      padding-top: 60px;
+      text-align: center; } }
 
 .revievs-title {
   font-weight: 600;

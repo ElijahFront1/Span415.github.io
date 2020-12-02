@@ -17,13 +17,25 @@
   background-color: white;
   max-height: 0;
   transition: max-height 0.1s ease-out;
-  overflow: hidden;
-  height: 170px; }
+  overflow: hidden; }
+  @media (max-width: 540px) {
+    .panel {
+      display: flex;
+      flex-direction: column; } }
   .panel img {
     margin-right: 15px;
-    float: left; }
+    float: left;
+    padding-bottom: 10px; }
+    @media (max-width: 540px) {
+      .panel img {
+        max-width: 100%;
+        height: auto;
+        margin: auto; } }
   .panel p {
     margin-top: 8px; }
+    @media (max-width: 540px) {
+      .panel p {
+        text-align: center; } }
 
 .accordion-elements {
   padding-bottom: 90px; }

@@ -7,7 +7,7 @@
 $primary-dark: #061e37;
 $primary-dark: #061e37;
 
-$screen-phone: 576px;
+$screen-phone: 330px;
 $screen-tablets: 768px;
 $screen-desktops: 992px;
 $screen-big-desktops: 1200px;
@@ -209,6 +209,9 @@ h2 {
             flex-direction: column;
         }
         .option {
+            @media (max-width: $screen-phone-max) {
+                padding-top: 40px;
+            }
             &-title {
                 font-size: 20px;
                 font-weight: 600;
@@ -222,6 +225,7 @@ h2 {
                 padding-top: 18px;
                 max-width: 365px;
                 margin: 0 auto;
+
             }
         }
     }
@@ -348,6 +352,7 @@ h2 {
         align-items: center;
         padding-bottom: 60px;
         padding-top: 60px;
+        text-align: center;
     }
 }
 .revievs-title {

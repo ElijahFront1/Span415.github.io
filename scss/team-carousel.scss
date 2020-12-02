@@ -1,3 +1,6 @@
+$screen-phone: 321px;
+$screen-phone-max: 767px;
+
 .team-carousel {
     display: flex;
     flex-direction: column;
@@ -5,6 +8,9 @@
     &-images {
         display: flex;
         flex-direction: row;
+        @media (max-width: $screen-phone) {
+            flex-direction: column;
+        }
         img {
             transition: transform 0.3s;
             margin: 0 auto;
@@ -17,7 +23,7 @@
     display: block;
     cursor: pointer;
     opacity: 0.3;
-    transition: .3s ease;
+    transition: 0.3s ease;
     backface-visibility: hidden;
 }
 .carouselitem {
@@ -61,10 +67,11 @@
     @media (max-width: $screen-phone-max) {
         width: 120px;
         height: 110px;
+        padding-bottom: 15px;
     }
 }
 
-.social-networks a{
+.social-networks a {
     padding-top: 5px;
     text-decoration: none;
     color: #90a4ae;
@@ -81,3 +88,4 @@
     padding-bottom: 100px;
     background-color: #fafafa;
 }
+
