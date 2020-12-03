@@ -32,6 +32,6 @@ const activeSlide = n => {
   slides[n - 1].classList.add('active-block');
   slides[n].classList.add('active-block');
 };
-///////////////////////////////////////////////
+
 prevBtn.addEventListener('click', prevSlide);
 nextBtn.addEventListener('click', nextSlide);
