@@ -1,9 +1,9 @@
 
-const prevBtn = document.querySelector('.revievs-prev-btn'), // Previous button
-  nextBtn = document.querySelector('.revievs-next-btn'), // Next button
-  slides = document.querySelectorAll('.reviev-block'); // Nodelist of slides
+const prevBtn = document.querySelector('.revievs-prev-btn'),
+  nextBtn = document.querySelector('.revievs-next-btn'),
+  slides = document.querySelectorAll('.reviev-block');
 
-let counter = 1 // Counter of slides 
+let counter = 1
 
 const prevSlide = () => {
   if (counter == 1) {
@@ -15,7 +15,7 @@ const prevSlide = () => {
   }
 }
 
-const nextSlide = () => { // Установить остановку на последнем слайде. Не перескакивать на первый слайд. 
+const nextSlide = () => {
   if (counter == slides.length - 1) {
     counter = 1;
     activeSlide(counter);
